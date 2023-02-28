@@ -39,6 +39,7 @@ public class HayMachine : MonoBehaviour
     private void ShootHay()
     {
         Instantiate(haybale, haySpawn.position, Quaternion.identity);
+        SoundManager.Instance.PlayShootClip();
     }
 
     private void UpdateShooting(){
