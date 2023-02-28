@@ -13,7 +13,7 @@ public class Sheep : MonoBehaviour
     private Collider myCollider;
     private Rigidbody myRigidbody;
 
-    private SheepSpawner sheepSpawner;
+    private SheepSpawn sheepSpawner;
 
     // Start is called before the first frame update
     void Start()
@@ -44,13 +44,14 @@ public class Sheep : MonoBehaviour
     }
 
     private void Drop(){
+        sheepSpawner.RemoveSheep(gameObject);
         dropped = true;
         myRigidbody.isKinematic = false;
         myCollider.isTrigger = false;
         Destroy(gameObject, dropDestroyDelay);
     }
 
-    public void SetSpawner(SheepSpawner spawner){
+    public void SetSpawner(SheepSpawn spawner){
         sheepSpawner = spawner;
     }
 }
