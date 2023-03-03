@@ -35,11 +35,12 @@ public class Sheep : MonoBehaviour
     private void HitByHay(){
         hayHit = true;
         speed = 0; //sheep stops moving
-        Destroy(gameObject, destroyDelay);
+        Destroy(gameObject, destroyDelay);//(object, time)
         Instantiate(heartPrefab, transform.position + new Vector3(0, heartOffset, 0), Quaternion.identity);
         TweenScale tweenScale = gameObject.AddComponent<TweenScale>();
         tweenScale.targetScale = 0;
         tweenScale.timeToReachTarget = destroyDelay;
+        GameStateManager.Instance.SavedSheep();//script.var.method telling GSM that sheep was saved
     }
 
     private void OnTriggerEnter(Collider other){
@@ -48,6 +49,7 @@ public class Sheep : MonoBehaviour
             HitByHay();
         }
         else if (other.CompareTag("DropSheep") && !dropped)
+        GameStateManager.Instance.DroppedSheep();//calls method in gamestatemanager
         Drop();
     }
 
