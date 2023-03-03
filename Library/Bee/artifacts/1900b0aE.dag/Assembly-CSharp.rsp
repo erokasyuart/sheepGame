@@ -333,6 +333,7 @@
 "Assets/RW/Scripts/HayMachine.cs"
 "Assets/RW/Scripts/Managers/GameStateManager.cs"
 "Assets/RW/Scripts/Managers/SoundManager.cs"
+"Assets/RW/Scripts/Managers/UIManager.cs"
 "Assets/RW/Scripts/Move.cs"
 "Assets/RW/Scripts/Rotate.cs"
 "Assets/RW/Scripts/Sheep.cs"
