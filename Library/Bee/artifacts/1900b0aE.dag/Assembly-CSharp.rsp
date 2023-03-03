@@ -338,6 +338,7 @@
 "Assets/RW/Scripts/Rotate.cs"
 "Assets/RW/Scripts/Sheep.cs"
 "Assets/RW/Scripts/SheepSpawn.cs"
+"Assets/RW/Scripts/Title.cs"
 "Assets/RW/Scripts/TweenScale.cs"
 -langversion:9.0
 
