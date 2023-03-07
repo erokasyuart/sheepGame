@@ -71,6 +71,9 @@
     <Compile Include="Assets\RW\Scripts\Title\StartButton.cs" />
     <Compile Include="Assets\RW\Scripts\Title\QuitButton.cs" />
     <Compile Include="Assets\RW\Scripts\Title\ChangeColourOnMouseOver.cs" />
+    <Compile Include="Assets\RW\Scripts\Shared\HayMachineColour.cs" />
+    <Compile Include="Assets\RW\Scripts\Shared\GameSettings.cs" />
+    <Compile Include="Assets\RW\Scripts\Shared\HayMachineSwitcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
