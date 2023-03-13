@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 //entering and exiting the area
 public class ChangeColourOnMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public MeshRenderer model;
+    public MeshRenderer model; //the meshrenderer
     public Color normalColour;
     public Color hoverColour;
     // Start is called before the first frame update

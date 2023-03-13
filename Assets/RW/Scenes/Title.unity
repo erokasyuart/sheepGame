@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.1805515, g: 0.22603463, b: 0.30707175, a: 1}
+  m_IndirectSpecularColor: {r: 0.18055171, g: 0.22603497, b: 0.30707234, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1524,6 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566116560}
   - component: {fileID: 1566116559}
+  - component: {fileID: 1566116561}
   m_Layer: 0
   m_Name: Hay Machines
   m_TagString: Untagged
@@ -1562,6 +1563,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1566116561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566116558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571da0b54747b6e488e030255a310d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueHayMachine: {fileID: 1673714538}
+  yellowHayMachine: {fileID: 2024783937}
+  redHayMachine: {fileID: 1819746579}
 --- !u!1001 &1628133923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1667,11 +1683,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1628133923}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1673714538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5233456973075758890, guid: 5c5170d876533ae43bc2e4b15c8e6f6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1198571080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1738700149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558,
     type: 3}
   m_PrefabInstance: {fileID: 1851825592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1819746579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278733490917006391, guid: 5162234e78cffba45b0498c4775c0be7,
+    type: 3}
+  m_PrefabInstance: {fileID: 83482629}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1851825592
 PrefabInstance:
@@ -1757,6 +1785,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: fee0f50f91e9d7d4a84a85232e663d4a,
     type: 3}
   m_PrefabInstance: {fileID: 638203176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2024783937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5917108387044516939, guid: 28d1a170d9eea59478aa66152b57f446,
+    type: 3}
+  m_PrefabInstance: {fileID: 650398524}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2027838350 stripped
 Transform:

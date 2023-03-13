@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance; //reference to script
-    
+
     [HideInInspector]
     public int sheepSaved; //# of saved sheep
 
@@ -24,7 +24,8 @@ public class GameStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             SceneManager.LoadScene("Title");
         }
     }
@@ -35,15 +36,18 @@ public class GameStateManager : MonoBehaviour
         UIManager.Instance.UpdateSheepSaved(); //calls the method
     }
 
-    private void GameOver(){
+    private void GameOver()
+    {
         sheepSpawner.canSpawn = false;
         sheepSpawner.DestroyAllSheep();
     }
 
-    public void DroppedSheep(){
+    public void DroppedSheep()
+    {
         sheepDropped++;
         UIManager.Instance.UpdateSheepDropped();
-        if (sheepDropped == sheepDroppedBeforeGameOver){
+        if (sheepDropped == sheepDroppedBeforeGameOver)
+        {
             GameOver();
             UIManager.Instance.ShowGameOverWindow();
         }
