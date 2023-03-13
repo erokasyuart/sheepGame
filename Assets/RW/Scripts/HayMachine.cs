@@ -10,10 +10,33 @@ public class HayMachine : MonoBehaviour
     public Transform haySpawn;
     public float shootInterval;
     private float shootTimer;
+
+    public Transform modelParent;
+    public GameObject blueModelPrefab;
+    public GameObject yellowModelPrefab;
+    public GameObject redModelPrefab;
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoadModel();
+    }
+
+    private void LoadModel()
+    {
+        Destroy(modelParent.GetChild(0).gameObject); //destroys the first child
+
+        switch (GameSettings.hayMachineColour)
+        {
+            case HayMachineColour.Blue:
+                Instantiate(blueModelPrefab, modelParent);
+                break;
+            case HayMachineColour.Yellow:
+                Instantiate(yellowModelPrefab, modelParent);
+                break;
+            case HayMachineColour.Red:
+                Instantiate(redModelPrefab, modelParent);
+                break;
+        }
     }
 
     // Update is called once per frame
