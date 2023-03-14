@@ -22,6 +22,8 @@ public class Sheep : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed += GameStateManager.Instance.speedInc; //takes the incrementing value from GameStateManager and adds it to speed
+                                                     // so the speed doesnt reset when instantiated
         myCollider = GetComponent<Collider>();
         myRigidbody = GetComponent<Rigidbody>();
     }

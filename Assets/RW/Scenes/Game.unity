@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.1788815, g: 0.22398543, b: 0.30585036, a: 1}
+  m_IndirectSpecularColor: {r: 0.17888132, g: 0.2239849, b: 0.30584964, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -586,8 +586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepSaved: 0
   sheepDropped: 0
-  sheepDroppedBeforeGameOver: 3
+  sheepDroppedBeforeGameOver: 100
   sheepSpawner: {fileID: 1624282603}
+  speedInc: 0
 --- !u!1 &703430971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1089,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5233456974663517127}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1656689132
+--- !u!4 &1656689133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2709791935418197139, guid: c91d458c12526534eb19d65378204353,
+    type: 3}
+  m_PrefabInstance: {fileID: 5233456974663517127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1656689134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1100,11 +1107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1245ed1c5f1fae4a9c68dbff2a7ada9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 20
+  movementSpeed: 14
   horizontalBoundary: 22
   haybale: {fileID: 2491674886040245642, guid: 1fcd131b40c4ca341b0479b2a7f8b335, type: 3}
   haySpawn: {fileID: 1656689133}
-  shootInterval: 0.8
+  shootInterval: 1
   modelParent: {fileID: 5233456974663517128}
   blueModelPrefab: {fileID: 5233456973075758890, guid: 5c5170d876533ae43bc2e4b15c8e6f6e,
     type: 3}
@@ -1112,12 +1119,6 @@ MonoBehaviour:
     type: 3}
   redModelPrefab: {fileID: 3278733490917006391, guid: 5162234e78cffba45b0498c4775c0be7,
     type: 3}
---- !u!4 &1656689133 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2709791935418197139, guid: c91d458c12526534eb19d65378204353,
-    type: 3}
-  m_PrefabInstance: {fileID: 5233456974663517127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1818451060
 PrefabInstance:
   m_ObjectHideFlags: 0

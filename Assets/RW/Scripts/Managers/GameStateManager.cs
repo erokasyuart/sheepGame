@@ -15,6 +15,10 @@ public class GameStateManager : MonoBehaviour
 
     public int sheepDroppedBeforeGameOver; //amount of losses before game ends
     public SheepSpawn sheepSpawner; //sheep spawner component
+
+    //ADVANCED ASSESSMENT TASK
+    public float speedInc; //counter used to increase speed of sheep over time
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,6 +32,7 @@ public class GameStateManager : MonoBehaviour
         {
             SceneManager.LoadScene("Title");
         }
+        speedInc += Time.deltaTime / 4; //increases over time. divided so it doesnt increase too fast
     }
 
     public void SavedSheep()
