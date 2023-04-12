@@ -18,6 +18,7 @@ public class GameStateManager : MonoBehaviour
 
     //ADVANCED ASSESSMENT TASK
     public float speedInc; //counter used to increase speed of sheep over time
+    public int highScore;
 
     // Start is called before the first frame update
     void Awake()
@@ -43,6 +44,10 @@ public class GameStateManager : MonoBehaviour
 
     private void GameOver()
     {
+        if (sheepSaved > highScore)
+        {
+            highScore = sheepSaved;
+        }
         sheepSpawner.canSpawn = false;
         sheepSpawner.DestroyAllSheep();
     }

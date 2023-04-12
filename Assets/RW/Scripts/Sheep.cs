@@ -35,6 +35,7 @@ public class Sheep : MonoBehaviour
     }
 
     private void HitByHay(){
+        //sheepSpawner.RemoveSheepFromList(gameObject);
         hayHit = true;
         speed = 0; //sheep stops moving
         Destroy(gameObject, destroyDelay);//(object, time)
@@ -51,11 +52,15 @@ public class Sheep : MonoBehaviour
             HitByHay();
         }
         else if (other.CompareTag("DropSheep") && !dropped)
-        GameStateManager.Instance.DroppedSheep();//calls method in gamestatemanager
-        Drop();
+        {
+            //GameStateManager.Instance.DroppedSheep();//calls method in gamestatemanager
+            Drop();
+        }
     }
 
     private void Drop(){
+        GameStateManager.Instance.DroppedSheep();
+        //sheepSpawner.RemoveSheepFromList(gameObject);
         sheepSpawner.RemoveSheep(gameObject);
         dropped = true;
         myRigidbody.isKinematic = false;
