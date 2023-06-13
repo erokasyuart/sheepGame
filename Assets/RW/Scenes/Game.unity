@@ -586,7 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepSaved: 0
   sheepDropped: 0
-  sheepDroppedBeforeGameOver: 100
+  sheepDroppedBeforeGameOver: 3
   sheepSpawner: {fileID: 1624282603}
   speedInc: 0
   highScore: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepSavedText: {fileID: 2096603411}
   sheepDroppedText: {fileID: 961674639}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1529565045}
   gameOverWindow: {fileID: 569992587}
   hs: 0
 --- !u!1 &744258717
@@ -1007,7 +1007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: 313}
+  m_AnchoredPosition: {x: -82, y: 305.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529565045
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Highscore: 0'
 --- !u!222 &1529565046
 CanvasRenderer:
   m_ObjectHideFlags: 0

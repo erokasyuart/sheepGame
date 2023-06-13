@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ShowGameOverWindow(){
-        scoreText.text = GameStateManager.Instance.highScore.ToString();
+        scoreText.text = "Highscore: " + GameStateManager.Instance.highScore.ToString(); //saves score game end
         gameOverWindow.SetActive(true);
     }
 }

@@ -16,12 +16,6 @@ public class SheepSpawn : MonoBehaviour
         StartCoroutine(SpawnRoutine());//
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void SpawnSheep(){
         Vector3 randomPosition = sheepSpawnPositions[Random.Range(0, sheepSpawnPositions.Count)].position;
         //random range of the length of the sheepspawnpositions (1-3) and their positions is saved to randomPosition
@@ -33,6 +27,10 @@ public class SheepSpawn : MonoBehaviour
     private IEnumerator SpawnRoutine(){
         while(canSpawn){
             SpawnSheep();
+            if(timeBetweenSpawns >= 1f)
+            {
+                timeBetweenSpawns = timeBetweenSpawns - 0.05f;
+            }            
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }
