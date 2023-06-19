@@ -22,8 +22,7 @@ public class Sheep : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed += GameStateManager.Instance.speedInc; //takes the incrementing value from GameStateManager and adds it to speed
-                                                     // so the speed doesnt reset when instantiated
+        speed += GameStateManager.Instance.speedInc; //takes the incrementing value from GameStateManager and adds it to speed so the speed doesnt reset when instantiated
         myCollider = GetComponent<Collider>();
         myRigidbody = GetComponent<Rigidbody>();
     }
@@ -35,7 +34,6 @@ public class Sheep : MonoBehaviour
     }
 
     private void HitByHay(){
-        //sheepSpawner.RemoveSheepFromList(gameObject);
         hayHit = true;
         speed = 0; //sheep stops moving
         Destroy(gameObject, destroyDelay);//(object, time)
@@ -48,12 +46,11 @@ public class Sheep : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Hay") && !hayHit){
-            Destroy(other);
+            Destroy(other.gameObject);
             HitByHay();
         }
         else if (other.CompareTag("DropSheep") && !dropped)
         {
-            //GameStateManager.Instance.DroppedSheep();//calls method in gamestatemanager
             Drop();
         }
     }
