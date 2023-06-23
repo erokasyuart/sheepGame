@@ -24,6 +24,7 @@ public class SheepSpawn : MonoBehaviour
         sheep.GetComponent<Sheep>().SetSpawner(this);
     }
 
+    //Uses coroutine to be able to spawn sheep with time between
     private IEnumerator SpawnRoutine(){
         while(canSpawn){
             SpawnSheep();
@@ -35,11 +36,13 @@ public class SheepSpawn : MonoBehaviour
         }
     }
 
-    public void RemoveSheep(GameObject sheep) //removes sheep from list - gets called
+    //Removes sheep from list
+    public void RemoveSheep(GameObject sheep)
     {
         sheepList.Remove(sheep);
     }
 
+    //Destroys the sheep
     public void DestroyAllSheep()
     {
         foreach(GameObject sheep in sheepList)

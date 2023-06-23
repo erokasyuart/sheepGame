@@ -33,6 +33,7 @@ public class Sheep : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
+    //When the sheep are hit by the hay
     private void HitByHay(){
         hayHit = true;
         speed = 0; //sheep stops moving
@@ -44,6 +45,7 @@ public class Sheep : MonoBehaviour
         GameStateManager.Instance.SavedSheep();//script.var.method telling GSM that sheep was saved
     }
 
+    //When the sheep and the hay enter the collider
     private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Hay") && !hayHit){
             Destroy(other.gameObject);
@@ -55,6 +57,7 @@ public class Sheep : MonoBehaviour
         }
     }
 
+    //What happens when a sheep falls off
     private void Drop(){
         GameStateManager.Instance.DroppedSheep();
         sheepSpawner.RemoveSheep(gameObject);

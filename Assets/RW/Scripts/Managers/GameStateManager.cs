@@ -37,12 +37,14 @@ public class GameStateManager : MonoBehaviour
         speedInc += Time.deltaTime / 4; //increases over time. divided so it doesnt increase too fast
     }
 
+    //Counts how many sheep have been saved
     public void SavedSheep()
     {
         sheepSaved++;
         UIManager.Instance.UpdateSheepSaved(); //calls the method
     }
 
+    //Issues the game over scene and updates the highscore
     private void GameOver()
     {
         if (sheepSaved > highScore)
@@ -54,6 +56,7 @@ public class GameStateManager : MonoBehaviour
         sheepSpawner.DestroyAllSheep();
     }
 
+    //Counts how many sheep have been dropped
     public void DroppedSheep()
     {
         sheepDropped++;

@@ -44,7 +44,6 @@
      <Compile Include="Assets\RW\Scripts\Title\StartButton.cs" />
      <Compile Include="Assets\RW\Scripts\Managers\GameStateManager.cs" />
      <Compile Include="Assets\RW\Scripts\Title\QuitButton.cs" />
-     <Compile Include="Assets\RW\Scripts\Title.cs" />
      <Compile Include="Assets\RW\Scripts\TweenScale.cs" />
      <Compile Include="Assets\RW\Scripts\Move.cs" />
      <Compile Include="Assets\RW\Scripts\DestroyOnTrigger.cs" />
